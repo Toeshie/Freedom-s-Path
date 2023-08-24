@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TransparencyChanger" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAgAAAAAAAAAAAQAgAEAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Buildings\TransparencyChanger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyRandomPatrol">
+    <Position X="4" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAUQAAAAAAAAAAAAAAAEAAAAAAAAAAAAEAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Enemies Scripts\EnemyRandomPatrol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OnOffLight">
+    <Position X="2" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IQAAAAAAAAAgAAAAAAAAAACAAAAAAAAAAAAQAAAAAFA=</HashCode>
+      <FileName>Assets\Scripts\Enemies Scripts\OnOffLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReloadScene" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEAAIAAAAAAAAgAEAAAAAAAAAAAAACAEA=</HashCode>
+      <FileName>Assets\Scripts\Enemies Scripts\Reload Scene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotatingLight" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACABAAAIAAAAAAAAAAAAAgAAAAAAARAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemies Scripts\RotatingLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TwoPointPatrolingLight">
+    <Position X="2" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAUQAAAAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Enemies Scripts\TwoPointPatrolingLight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu" Collapsed="true">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MenuStuff\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu" Collapsed="true">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAhAACAAAAAAAAAAEAAAAEAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\MenuStuff\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VictoryMessage" Collapsed="true">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAgAAAAAgAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MenuStuff\VictoryMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Movement" Collapsed="true">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAEgAgAAAACAAAAAAAAAAAAAAAAAAAACAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Player Scripts\Movement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stealth" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACEAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAQEA=</HashCode>
+      <FileName>Assets\Scripts\Player Scripts\Stealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

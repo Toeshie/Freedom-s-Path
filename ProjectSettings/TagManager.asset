@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - StealthProvider
+  - Balloon1
+  - Balloon2
+  - Balloon3
+  - Balloon4
+  - Balloon5
+  - CheckPoint
+  - FenceInFrontOfPlayer
+  - FactoryWalls
+  - PauseMenuTag
+  - JeepTag
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - LightCollisionLayer
+  - Water
+  - UI
+  - Envoirment
+  - StealthLayer
+  - Builds
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Tiles
+    uniqueID: 3530963707
+    locked: 0
+  - name: TreeTest
+    uniqueID: 1349588895
+    locked: 0
+  - name: PlayerBehindFences
+    uniqueID: 3206345969
+    locked: 0
+  - name: FencesOnTopOfPlayer
+    uniqueID: 663213527
+    locked: 0
+  - name: EnvoirementBehindPlayer
+    uniqueID: 1457034921
+    locked: 0
+  - name: PlayerBehindRoofs
+    uniqueID: 2611140691
+    locked: 0
+  - name: Buildings
+    uniqueID: 1982973923
+    locked: 0
+  - name: PlayerInFrontOfBuildingsButNotFences
+    uniqueID: 1107000135
+    locked: 0
+  - name: TilesInFrontOfBuildings
+    uniqueID: 1110747479
+    locked: 0
+  - name: ObjectsNotAffectedByLights
+    uniqueID: 1477324607
+    locked: 0
+  - name: StealthLayerWithNoLightShadows
+    uniqueID: 1154751225
+    locked: 0
+  - name: Player
+    uniqueID: 1131380341
+    locked: 0
+  - name: Envoirement
+    uniqueID: 1615198357
+    locked: 0
+  - name: NotAfectedByLightInFrontOfPLayer
+    uniqueID: 1721062133
+    locked: 0
