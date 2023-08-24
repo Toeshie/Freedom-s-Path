@@ -6,8 +6,9 @@ using UnityEngine;
 public class TextBalloons : MonoBehaviour
 {
     //NOT FINAL CODE TO BE CHANGED!!!!!!!!!!!!!!!!!!!! PLACEHOLDER CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    [SerializeField] private float balloonDisplayDuration = 3.5f;
+    [SerializeField] private float balloonDisplayDuration = 2.5f;
     [SerializeField] private GameObject balloon1;
+    [SerializeField] private GameObject balloon2;
     [SerializeField] private GameObject balloon3;
     [SerializeField] private GameObject balloon4;
     [SerializeField] private GameObject balloon5;
@@ -16,6 +17,8 @@ public class TextBalloons : MonoBehaviour
     
 
     private bool balloon1flag = false;
+    
+    private bool balloon2flag = false;
     
     private bool balloon3flag = false;
 
@@ -33,6 +36,13 @@ public class TextBalloons : MonoBehaviour
             isBalloonOnScreen = true;
             balloonsAudioSource.PlayOneShot(balloonsAudioClip);
             StartCoroutine(ActivateAndDeactivateBalloon1());
+        }
+        if (other.gameObject.CompareTag("Balloon2") && !balloon2flag && !isBalloonOnScreen)
+        {
+            balloon2flag = true;
+            isBalloonOnScreen = true;
+            balloonsAudioSource.PlayOneShot(balloonsAudioClip);
+            StartCoroutine(ActivateAndDeactivateBalloon2());
         }
         
        
@@ -66,6 +76,13 @@ public class TextBalloons : MonoBehaviour
         balloon1.SetActive(true);
         yield return new WaitForSeconds(balloonDisplayDuration); 
         balloon1.SetActive(false);
+        isBalloonOnScreen = false;
+    }
+    private IEnumerator ActivateAndDeactivateBalloon2()
+    {
+        balloon2.SetActive(true);
+        yield return new WaitForSeconds(balloonDisplayDuration); 
+        balloon2.SetActive(false);
         isBalloonOnScreen = false;
     }
     
