@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField]private AudioSource walkingAudioSource = null;
 
-    [SerializeField] private AudioClip playerWalking;
+    [SerializeField] private AudioClip[] playerWalking;
 
    
 
@@ -42,7 +42,9 @@ public class Movement : MonoBehaviour
             SpriteSelector();
             if (direction != Vector2.zero && !walkingAudioSource.isPlaying)
             {
-                walkingAudioSource.PlayOneShot(playerWalking);
+                int randomIndex = UnityEngine.Random.Range(0, playerWalking.Length);
+                walkingAudioSource.clip = playerWalking[randomIndex];
+                StartCoroutine(StepSoundTimer());
             }
         }
         
@@ -120,8 +122,12 @@ public class Movement : MonoBehaviour
             idleTime = Time.time;
         }
     }
-    
-    
+
+    private IEnumerator StepSoundTimer()
+    {
+        yield return new WaitForSeconds(0.17f);
+        walkingAudioSource.Play();
+    }
    
     
     
