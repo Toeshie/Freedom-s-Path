@@ -2024,6 +2024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b1b66c4c8d63bb42a9cc600848df2bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startButton: {fileID: 675112744}
 --- !u!1 &783335336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,8 +2512,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 730, y: -469}
-  m_SizeDelta: {x: 540.096, y: 212.821}
+  m_AnchoredPosition: {x: 764, y: -474}
+  m_SizeDelta: {x: 431.757, y: 170.131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &887902624
 MonoBehaviour:
@@ -3526,7 +3527,7 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 675112744}
+    m_SelectOnUp: {fileID: 1573911054}
     m_SelectOnDown: {fileID: 2007602844}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
@@ -3555,7 +3556,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 320952559}
+      - m_Target: {fileID: 1609062813}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -4871,7 +4872,7 @@ MonoBehaviour:
     m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 675112744}
-    m_SelectOnDown: {fileID: 2007602844}
+    m_SelectOnDown: {fileID: 1190742576}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
