@@ -1,10 +1,12 @@
 
+using System;
 using UnityEngine;
 
 
 public class InventoryItemControler : MonoBehaviour
 {
    Item item;
+   
 
    public void RemoveItem()
    {

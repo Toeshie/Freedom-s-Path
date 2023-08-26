@@ -12,6 +12,7 @@ public class TextBalloons : MonoBehaviour
     [SerializeField] private GameObject balloon3;
     [SerializeField] private GameObject balloon4;
     [SerializeField] private GameObject balloon5;
+    [SerializeField] private GameObject inventoryFullBalloon;
     [SerializeField] private AudioSource balloonsAudioSource = null;
     [SerializeField] private AudioClip balloonsAudioClip;
     
@@ -68,9 +69,23 @@ public class TextBalloons : MonoBehaviour
             balloonsAudioSource.PlayOneShot(balloonsAudioClip);
             StartCoroutine(ActivateAndDeactivateBalloon5());
         }
-        
-        
     }
+
+    public void InventoryFullTrigger()
+    {
+        isBalloonOnScreen = true;
+        balloonsAudioSource.PlayOneShot(balloonsAudioClip);
+        StartCoroutine(ActivateAndDeactivateInventoryFullBalloon());
+    }
+
+    private IEnumerator ActivateAndDeactivateInventoryFullBalloon()
+    {
+        inventoryFullBalloon.SetActive(true);
+        yield return new WaitForSeconds(balloonDisplayDuration);
+        inventoryFullBalloon.SetActive(false);
+        isBalloonOnScreen = false;
+    }
+    
     private IEnumerator ActivateAndDeactivateBalloon1()
     {
         balloon1.SetActive(true);

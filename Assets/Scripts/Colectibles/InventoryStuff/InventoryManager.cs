@@ -37,6 +37,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (items.Contains(item1))
         {
             print($"Item1");
@@ -64,6 +65,7 @@ public class InventoryManager : MonoBehaviour
         {
             print($"Item2 e Item3");
         }
+        */
     }
 
     private void Start()
@@ -74,7 +76,6 @@ public class InventoryManager : MonoBehaviour
     public void Add(Item item)
     {
         items.Add(item);
-        
     }
 
     public void Remove(Item item)

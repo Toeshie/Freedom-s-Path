@@ -9,7 +9,14 @@ public class ItemsPickUp : MonoBehaviour
     public Item item;
     [SerializeField] private AudioSource pickUpAudioSource = null;
     [SerializeField] private AudioClip pickUpAudioClip = null;
-    
+
+    private TextBalloons _textBalloons = null;
+
+    private void Awake()
+    {
+        _textBalloons = FindObjectOfType<TextBalloons>().GetComponent<TextBalloons>();
+    }
+
 
     private void Update()
     {
@@ -26,7 +33,14 @@ public class ItemsPickUp : MonoBehaviour
             pickUpAudioSource.PlayOneShot(pickUpAudioClip);
             InventoryManager.instance.Add(item);
             StartCoroutine(DelayDestroy());
+            
         }
+
+        if (IsPlayerInTrigger() && InventoryManager.instance.items.Count == 2)
+        {
+            _textBalloons.InventoryFullTrigger();
+        }
+        
     }
 
     // ReSharper disable Unity.PerformanceAnalysis
