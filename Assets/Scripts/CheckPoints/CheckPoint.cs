@@ -8,7 +8,13 @@ public class Checkpoint : MonoBehaviour
     private bool hasFadedOutTimer = false;
     private AudioSource checkPointAudio = null;
     [SerializeField] private AudioClip checkPointSound;
-    
+    private Movement _movement = null;
+
+    private void Awake()
+    {
+        _movement = FindObjectOfType<Movement>().GetComponent<Movement>();
+    }
+
     private void Start()
     {
         checkPointAudio = GetComponent<AudioSource>();
@@ -21,6 +27,7 @@ public class Checkpoint : MonoBehaviour
         {
             if (!hasFadedOutTimer)
             {
+                _movement.SetCanMove(false);
                 fadeInOutBlack.FadeIn();
                 checkPointAudio.PlayOneShot(checkPointSound);
                 StartCoroutine(BlinkOut());
@@ -46,5 +53,6 @@ public class Checkpoint : MonoBehaviour
         yield return new WaitForSeconds(2f);
         fadeInOutBlack.FadeOut();
         hasFadedOutTimer = true;
+        _movement.SetCanMove(true);
     }
 }
