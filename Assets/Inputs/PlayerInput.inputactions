@@ -33,12 +33,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Collect",
+                    "name": "ButtonPress",
                     "type": "Button",
-                    "id": "9e924d0a-4d7e-4819-a6fd-849151974c0e",
+                    "id": "f90240f9-1737-423a-be58-2402981147f3",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press",
                     "initialStateCheck": false
                 }
             ],
@@ -276,45 +276,12 @@
                 },
                 {
                     "name": "",
-                    "id": "a2894ad5-9e2a-4f23-966f-a2007a0926b4",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
-                    "action": "Collect",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9e32babd-4e5b-4732-aaca-5db66d52c645",
-                    "path": "<XInputController>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Collect",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3019b61a-9497-4adb-9810-07bf77db11e9",
-                    "path": "<DualShockGamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad",
-                    "action": "Collect",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "54f573d7-6ade-408e-a76a-cd3bc413e915",
+                    "id": "d0255335-3531-4591-b972-9a0c306d107e",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Collect",
+                    "action": "ButtonPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

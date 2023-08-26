@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine;
 
 
+
 public class ItemsPickUp : MonoBehaviour
 {
     public Item item;
@@ -16,8 +17,7 @@ public class ItemsPickUp : MonoBehaviour
     {
         _textBalloons = FindObjectOfType<TextBalloons>().GetComponent<TextBalloons>();
     }
-
-
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -25,8 +25,8 @@ public class ItemsPickUp : MonoBehaviour
             TryPickUp();
         }
     }
-
-    private void TryPickUp()
+    
+    public void TryPickUp()
     {
         if (InventoryManager.instance.items.Count < 2 && IsPlayerInTrigger())
         {

@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private AudioClip[] playerWalking;
 
-   
+    
 
     private float idleTime;
 
@@ -54,6 +54,8 @@ public class Movement : MonoBehaviour
         }
         FlipSprite();
     }
+
+    
 
 
     public void SetCanMove(bool canMove)
