@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteractionSystem : MonoBehaviour, IInteractable
@@ -14,14 +15,7 @@ public class PlayerInteractionSystem : MonoBehaviour, IInteractable
 
     public void Collect()
     {
-        
-    }
-   
-    
-    public void OnButtonPress()
-    {
-        
-        
+       
     }
     
 }

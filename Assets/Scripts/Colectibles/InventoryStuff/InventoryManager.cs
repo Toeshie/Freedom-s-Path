@@ -9,9 +9,9 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    [SerializeField] private Item item1 = null;
-    [SerializeField] private Item item2 = null;
-    [SerializeField] private Item item3 = null;
+    //[SerializeField] private Item item1 = null;
+    //[SerializeField] private Item item2 = null;
+    //[SerializeField] private Item item3 = null;
     
     
     

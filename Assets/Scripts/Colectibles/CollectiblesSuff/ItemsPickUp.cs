@@ -1,8 +1,10 @@
 
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 
 
 public class ItemsPickUp : MonoBehaviour
@@ -20,11 +22,12 @@ public class ItemsPickUp : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             TryPickUp();
         }
     }
+    
     
     public void TryPickUp()
     {
