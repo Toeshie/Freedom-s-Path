@@ -16,6 +16,7 @@ using UnityEngine.SceneManagement;
         private bool beenCaught = false;
         [SerializeField] private AudioSource playerEntersLightRangeSource = null;
         [SerializeField] private AudioClip playerEntersLightRangeClip = null;
+        [SerializeField] private AudioClip playerGettingCaught = null;
         private void Awake()
         {
             playerReference = FindObjectOfType<Movement>();
@@ -56,7 +57,7 @@ using UnityEngine.SceneManagement;
         
         private void OnGettingCaughtActions()
         {
-            
+            playerEntersLightRangeSource.PlayOneShot(playerGettingCaught);
             gettingCaughtBalloon.SetActive(true);
             playerReference.SetCanMove(false);
             respawnPosition = CheckpointManager.GetRespawnPosition(); 
