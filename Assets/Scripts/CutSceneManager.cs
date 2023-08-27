@@ -68,12 +68,4 @@ public class CutSceneManager : MonoBehaviour
         mainVideoPlayer.clip = item2N3Video;
         mainVideoPlayer.Play();
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
