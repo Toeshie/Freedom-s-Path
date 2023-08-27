@@ -7,7 +7,6 @@ using UnityEngine.Video;
 
 public class FinalCutSceneTrigger : MonoBehaviour
 {
-    [SerializeField] private VideoPlayer videoPlayer = null;
     [SerializeField] private GameObject creditsFrame;
     [SerializeField] private Movement playerReference;
     [SerializeField] private GameObject dedication;
@@ -21,7 +20,7 @@ public class FinalCutSceneTrigger : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            videoPlayer.Play();
+            InventoryManager.instance.FinalCutsceneConditions();
             playerReference.SetCanMove(false);
             StartCoroutine(CreditsTimer());
             StartCoroutine(BackToMainMenu());

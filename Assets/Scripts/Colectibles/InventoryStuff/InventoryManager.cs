@@ -9,9 +9,9 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    //[SerializeField] private Item item1 = null;
-    //[SerializeField] private Item item2 = null;
-    //[SerializeField] private Item item3 = null;
+    [SerializeField] private Item item1 = null;
+    [SerializeField] private Item item2 = null;
+    [SerializeField] private Item item3 = null;
     
     
     
@@ -34,38 +34,41 @@ public class InventoryManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
+    
+     
 
-    private void Update()
+    public void FinalCutsceneConditions()
     {
-        /*
+
         if (items.Contains(item1))
         {
-            print($"Item1");
-        }
-
-        if (items.Contains(item2))
-        {
-            print($"Item2");
-        }
-
-        if (items.Contains(item3))
-        {
-            print($"Item3");
+            CutSceneManager.instance.PlayCutSceneItem1();
         }
 
         if (items.Contains(item1) && items.Contains(item2))
         {
-            print($"Item1 e Item2");
+            CutSceneManager.instance.PlayCutSceneItem1N2();
         }
+
         if (items.Contains(item1) && items.Contains(item3))
         {
-            print($"Item1 e Item3");
+            CutSceneManager.instance.PlayCutSceneItem1N3();
         }
+
+        if (items.Contains(item2))
+        {
+            CutSceneManager.instance.PlayCutSceneItem2();
+        }
+
         if (items.Contains(item2) && items.Contains(item3))
         {
-            print($"Item2 e Item3");
+            CutSceneManager.instance.PlayCutSceneItem2N3();
         }
-        */
+
+        if (items.Contains(item3))
+        {
+            CutSceneManager.instance.PlayCutSceneItem3();
+        }
     }
 
     private void Start()
