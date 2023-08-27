@@ -4789,6 +4789,22 @@ PrefabInstance:
       propertyPath: ShapeModule.radius.value
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 20400126438560350, guid: 274b92128634b6b45921cfb75fe23b6a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20400126438560350, guid: 274b92128634b6b45921cfb75fe23b6a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20400126438560350, guid: 274b92128634b6b45921cfb75fe23b6a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20400126438560350, guid: 274b92128634b6b45921cfb75fe23b6a, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6808678619133734603, guid: 274b92128634b6b45921cfb75fe23b6a, type: 3}
       propertyPath: m_Name
       value: Dust

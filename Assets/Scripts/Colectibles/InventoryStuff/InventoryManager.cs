@@ -35,11 +35,9 @@ public class InventoryManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     
-     
-
+    
     public void FinalCutsceneConditions()
     {
-
         if (items.Contains(item1))
         {
             CutSceneManager.instance.PlayCutSceneItem1();
