@@ -37,6 +37,7 @@ public class FinalCutSceneTrigger : MonoBehaviour
     private IEnumerator Credits()
     {
         yield return new WaitForSeconds(7f);
+        AudioManager.Instance.FadeOutVolumeOverTime();
         role1.SetActive(true);
         role2.SetActive(true);
         gameArtist.SetActive(true);

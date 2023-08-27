@@ -14,7 +14,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private Slider fxSlider = null;
     [SerializeField] private Slider ambienceSlider = null;
     [SerializeField] private AudioMixer audioMixer;
-
+    private float initialVolume;
+    
+    
     private void Awake()
     {
         if (Instance == null)
@@ -31,6 +33,7 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         LoadValues();
+        audioMixer.GetFloat("MasterVolume", out initialVolume);
     }
 
     public void ChangeMasterVolume(float volumeValue)
@@ -67,5 +70,27 @@ public class AudioManager : MonoBehaviour
         volumeSlider.value = volumeValue;
         ambienceSlider.value = ambienceVolume;
         fxSlider.value = fxVolumeValue;
+    }
+
+    public void FadeOutVolumeOverTime()
+    {
+        StartCoroutine(FadeOutVolume(6f));
+    }
+
+    private IEnumerator FadeOutVolume(float fadeDuration)
+    {
+        float elapsedTime = 0;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float normalizedTime = elapsedTime / fadeDuration;
+            float newVolume = Mathf.Lerp(initialVolume, -80f, normalizedTime);
+
+            audioMixer.SetFloat("MasterVolume", newVolume);
+
+            yield return null;
+        }
+
+        audioMixer.SetFloat("MasterVolume", -80f);
     }
 }
