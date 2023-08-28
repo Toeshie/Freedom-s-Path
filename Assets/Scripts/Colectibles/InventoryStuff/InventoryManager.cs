@@ -12,9 +12,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private Item item1 = null;
     [SerializeField] private Item item2 = null;
     [SerializeField] private Item item3 = null;
-    
-    
-    
+
     public List<Item> items = new(2);
 
     [SerializeField] private Transform itemContent;
@@ -66,6 +64,10 @@ public class InventoryManager : MonoBehaviour
         if (items.Contains(item3))
         {
             CutSceneManager.instance.PlayCutSceneItem3();
+        }
+        else
+        {
+            CutSceneManager.instance.PlayNoItemCutScene();
         }
     }
 

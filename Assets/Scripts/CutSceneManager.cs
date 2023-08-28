@@ -10,6 +10,7 @@ public class CutSceneManager : MonoBehaviour
     public static CutSceneManager instance;
 
     [SerializeField] private VideoPlayer mainVideoPlayer = null;
+    [SerializeField] private VideoClip noItemVideo = null;
     [SerializeField] private VideoClip item1Video = null;
     [SerializeField] private VideoClip item2Video = null;
     [SerializeField] private VideoClip item3Video = null;
@@ -33,6 +34,12 @@ public class CutSceneManager : MonoBehaviour
     private void Start()
     {
         mainVideoPlayer.clip = item1Video;
+    }
+
+    public void PlayNoItemCutScene()
+    {
+        mainVideoPlayer.clip = noItemVideo;
+        mainVideoPlayer.Play();
     }
 
     public void PlayCutSceneItem1()
