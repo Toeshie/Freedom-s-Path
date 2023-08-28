@@ -74,14 +74,13 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
-        
     }
 
     public void QuitToMainMenu()
     {
+        ResumeGame();
         SceneManager.LoadScene("Main Menu");
         pauseMenu.SetActive(false);
-        isPaused = false;
     }
 
     private void PlayButtonClick()
