@@ -93,6 +93,8 @@ using UnityEngine.SceneManagement;
             }
             else
             {
+                InventoryManager.instance.ClearInventory();
+                InventoryManager.instance.ClearItems();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }

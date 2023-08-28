@@ -17,10 +17,10 @@ public class InventoryManager : MonoBehaviour
     
     public List<Item> items = new(2);
 
-    public Transform itemContent;
-    public GameObject inventoryItem;
+    [SerializeField] private Transform itemContent;
+    [SerializeField] private GameObject inventoryItem;
     
-    public InventoryItemControler[] inventoryItems;
+    [SerializeField] private InventoryItemControler[] inventoryItems;
     
     private void Awake()
     {
@@ -71,7 +71,8 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-       items.Clear();
+       ClearItems();
+       ClearInventory();
     }
 
     public void Add(Item item)
@@ -97,13 +98,19 @@ public class InventoryManager : MonoBehaviour
         SetInventoryItems();
     }
 
-    private void ClearInventory()
+    public void ClearInventory()
     {
         foreach (Transform item in itemContent)
         {
             Destroy(item.gameObject);
         }
     }
+
+    public void ClearItems()
+    {
+        items.Clear();  
+    }
+    
 
 
     private void SetInventoryItems()

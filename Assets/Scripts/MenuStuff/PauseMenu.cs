@@ -12,8 +12,7 @@ public class PauseMenu : MonoBehaviour
     private bool isPaused;
     [SerializeField] private AudioClip buttonClickAudio = null;
     public static PauseMenu Instance;
-   
-
+    
     private void Awake()
     {
         if (Instance == null)
@@ -30,6 +29,8 @@ public class PauseMenu : MonoBehaviour
         
        menuAudioSource = GetComponent<AudioSource>();
        ResumeGame();
+       
+       
     }
 
     private void Update()
