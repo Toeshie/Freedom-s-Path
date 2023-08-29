@@ -12,6 +12,8 @@ public class PauseMenu : MonoBehaviour
     private bool isPaused;
     [SerializeField] private AudioClip buttonClickAudio = null;
     public static PauseMenu Instance;
+    private string firstScene = "1º Level";
+    private string secondScene = "2º Level";
     
     private void Awake()
     {
@@ -30,21 +32,23 @@ public class PauseMenu : MonoBehaviour
        menuAudioSource = GetComponent<AudioSource>();
        ResumeGame();
        
-       
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (SceneManager.GetActiveScene().name == firstScene || SceneManager.GetActiveScene().name == secondScene)
         {
-            TogglePause();
-            PlayButtonClick();
-        }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                TogglePause();
+                PlayButtonClick();
+            }
         
-        if (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
-        {
-            TogglePause();
-            PlayButtonClick();
+            if (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
+            {
+                TogglePause();
+                PlayButtonClick();
+            }
         }
     }
 
