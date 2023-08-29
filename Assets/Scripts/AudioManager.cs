@@ -27,13 +27,11 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
         LoadValues();
-        audioMixer.GetFloat("MasterVolume", out initialVolume);
     }
 
     public void ChangeMasterVolume(float volumeValue)
@@ -59,7 +57,6 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetFloat("VolumeValue", volumeValue);
         PlayerPrefs.SetFloat("ambienceVolume", ambienceVolume);
         PlayerPrefs.SetFloat("fxVolume" , fxVolumeValue);
-        LoadValues();
     }
 
     private void LoadValues()
@@ -70,6 +67,7 @@ public class AudioManager : MonoBehaviour
         volumeSlider.value = volumeValue;
         ambienceSlider.value = ambienceVolume;
         fxSlider.value = fxVolumeValue;
+        audioMixer.GetFloat("MasterVolume", out initialVolume);
     }
 
     public void FadeOutVolumeOverTime()
