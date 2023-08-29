@@ -30,12 +30,7 @@ public class CutSceneManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
-
-    private void Start()
-    {
-        mainVideoPlayer.clip = item1Video;
-    }
-
+    
     public void PlayNoItemCutScene()
     {
         mainVideoPlayer.clip = noItemVideo;
