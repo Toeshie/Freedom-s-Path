@@ -109,8 +109,6 @@ public class InventoryManager : MonoBehaviour
         items.Clear();  
     }
     
-
-
     private void SetInventoryItems()
     {
         inventoryItems = itemContent.GetComponentsInChildren<InventoryItemControler>();
