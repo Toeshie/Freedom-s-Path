@@ -17,6 +17,7 @@ using UnityEngine.SceneManagement;
         [SerializeField] private AudioSource playerEntersLightRangeSource = null;
         [SerializeField] private AudioClip playerEntersLightRangeClip = null;
         [SerializeField] private AudioClip playerGettingCaught = null;
+        [SerializeField] private float gameOverTimer = 3.5f;
         private void Awake()
         {
             playerReference = FindObjectOfType<Movement>();
@@ -83,7 +84,7 @@ using UnityEngine.SceneManagement;
             OnGettingCaughtActions();
             beenCaught = true;
             
-            yield return new WaitForSeconds(3.5f);
+            yield return new WaitForSeconds(gameOverTimer);
             
             gettingCaughtBalloon.SetActive(false);
             

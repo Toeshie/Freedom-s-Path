@@ -39,24 +39,23 @@ public class InventoryManager : MonoBehaviour
         if (items.Contains(item1) && items.Contains(item2))
         {
             CutSceneManager.instance.PlayCutSceneItem1N2();
-        }
+        }else
         if (items.Contains(item1) && items.Contains(item3))
         {
             CutSceneManager.instance.PlayCutSceneItem1N3();
-        }
+        }else
         if (items.Contains(item2) && items.Contains(item3))
         {
             CutSceneManager.instance.PlayCutSceneItem2N3();
-        }
+        }else
         if (items.Contains(item1))
         {
             CutSceneManager.instance.PlayCutSceneItem1();
-        }
+        }else
         if (items.Contains(item2))
         {
             CutSceneManager.instance.PlayCutSceneItem2();
-        }
-
+        }else
         if (items.Contains(item3))
         {
             CutSceneManager.instance.PlayCutSceneItem3();

@@ -8,6 +8,11 @@ public class MovingPlatform : MonoBehaviour
     [SerializeField] private Transform startingPosition = null;
 
     [SerializeField] private float duration = 3f;
+
+    [SerializeField] private float jeepStartTimer = 2f;
+    [SerializeField] private float jeepResetTimer = 30f;
+    
+    
     
 
     private bool jeepStartFlag = false;
@@ -29,13 +34,13 @@ public class MovingPlatform : MonoBehaviour
 
     private IEnumerator JeepStart()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(jeepStartTimer);
         jeepStartFlag = true;
     }
 
     private IEnumerator RestartJeep()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(jeepResetTimer);
         transform.position = startingPosition.position;
     }
 

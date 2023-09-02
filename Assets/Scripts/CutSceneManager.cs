@@ -28,7 +28,6 @@ public class CutSceneManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
     }
     
     public void PlayNoItemCutScene()

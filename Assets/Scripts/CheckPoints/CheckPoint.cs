@@ -9,6 +9,8 @@ public class Checkpoint : MonoBehaviour
     private AudioSource checkPointAudio = null;
     [SerializeField] private AudioClip checkPointSound;
     private Movement _movement = null;
+    private float blinkTimer = 2f;
+    private float blinkReset = 30f;
 
     private void Awake()
     {
@@ -44,13 +46,13 @@ public class Checkpoint : MonoBehaviour
 
     private IEnumerator BlinkOutReset()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(blinkReset);
         hasFadedOutTimer = false;
     }
 
     private IEnumerator BlinkOut()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(blinkTimer);
         fadeInOutBlack.FadeOut();
         hasFadedOutTimer = true;
         _movement.SetCanMove(true);

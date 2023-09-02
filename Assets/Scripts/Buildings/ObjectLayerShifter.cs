@@ -5,8 +5,8 @@ using UnityEngine.Serialization;
 
 public class ObjectLayerShifter : MonoBehaviour
 {
-    [FormerlySerializedAs("treeStoringLayer")] [SerializeField] private string originalLayer;
-    [FormerlySerializedAs("treeBehindPlayerLayer")] [SerializeField] private string targetLayer;
+    [SerializeField] private string originalLayer;
+    [SerializeField] private string targetLayer;
     [SerializeField] private SpriteRenderer treeSpriteRenderer;
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -16,14 +16,12 @@ public class ObjectLayerShifter : MonoBehaviour
             treeSpriteRenderer.sortingLayerName = targetLayer;
         }
     }
-
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             treeSpriteRenderer.sortingLayerName = originalLayer;
         }
-        
     }
 }
     

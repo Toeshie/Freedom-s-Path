@@ -10,6 +10,5 @@ public class CheckPointPositionReseter : MonoBehaviour
     {
         checkpointManager = FindObjectOfType<CheckpointManager>();
         CheckpointManager.ResetCheckPointPosition();
-        
     }
 }

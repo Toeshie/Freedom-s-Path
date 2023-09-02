@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class TextBalloons : MonoBehaviour
 {
-    //NOT FINAL CODE TO BE CHANGED!!!!!!!!!!!!!!!!!!!! PLACEHOLDER CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     [SerializeField] private float balloonDisplayDuration = 2.5f;
     [SerializeField] private GameObject balloon1;
     [SerializeField] private GameObject balloon2;
@@ -124,7 +123,4 @@ public class TextBalloons : MonoBehaviour
         balloon5.SetActive(false);
         isBalloonOnScreen = false;
     }
-    
-   
-    //NOT FINAL CODE TO BE CHANGED!!!!!!!!!!!!!!!!!!!! PLACEHOLDER CODE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }

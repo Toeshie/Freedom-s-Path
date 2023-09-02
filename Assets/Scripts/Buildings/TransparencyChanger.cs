@@ -14,7 +14,6 @@ public class TransparencyChanger : MonoBehaviour
       mySpriteRenderer = GetComponent<SpriteRenderer>();
       normalColor = mySpriteRenderer.color;
    }
-
    private void OnTriggerEnter2D(Collider2D other)
    {
       if (other.CompareTag("Player"))
@@ -22,7 +21,6 @@ public class TransparencyChanger : MonoBehaviour
          mySpriteRenderer.color = transparentColor;
       }
    }
-
    private void OnTriggerExit2D(Collider2D other)
    {
       if (other.CompareTag("Player"))

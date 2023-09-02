@@ -4,8 +4,7 @@ using UnityEngine;
     {
         public static CheckpointManager Instance { get; private set; } = null;
         private Vector3 respawnPosition;
-
-
+        
         private void Awake()
         {
             if (Instance == null)

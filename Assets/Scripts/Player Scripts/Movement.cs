@@ -27,6 +27,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private AudioClip[] playerWalking;
 
+    [SerializeField] private float stepSoundTimer = 0.17f;
+
     
 
     private float idleTime;
@@ -127,7 +129,7 @@ public class Movement : MonoBehaviour
 
     private IEnumerator StepSoundTimer()
     {
-        yield return new WaitForSeconds(0.17f);
+        yield return new WaitForSeconds(stepSoundTimer);
         walkingAudioSource.Play();
     }
    

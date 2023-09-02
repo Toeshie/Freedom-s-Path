@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 public class VictoryMessage : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI finalText = null;
-
-
+    
     private void Start()
     {
         finalText.gameObject.SetActive(false);

@@ -15,6 +15,9 @@ public class FinalCutSceneTrigger : MonoBehaviour
     [SerializeField] private GameObject gameProgrammer;
     [SerializeField] private GameObject gameArtist;
     [SerializeField] private GameObject creditsTitle;
+    [SerializeField] private float creditsToStart = 5f;
+    [SerializeField] private float creditsTimeOnScreen = 7f;
+    [SerializeField] private float timeToMainMenu = 20f;
    
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,13 +32,13 @@ public class FinalCutSceneTrigger : MonoBehaviour
 
     private IEnumerator BackToMainMenu()
     {
-        yield return new WaitForSeconds(19f);
+        yield return new WaitForSeconds(timeToMainMenu);
         SceneManager.LoadScene("Main Menu");
     }
 
     private IEnumerator Credits()
     {
-        yield return new WaitForSeconds(7f);
+        yield return new WaitForSeconds(creditsTimeOnScreen);
         role1.SetActive(true);
         role2.SetActive(true);
         gameArtist.SetActive(true);
@@ -45,7 +48,7 @@ public class FinalCutSceneTrigger : MonoBehaviour
 
     private IEnumerator CreditsTimer()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(creditsToStart);
         creditsFrame.SetActive(true);
         dedication.SetActive(true);
         StartCoroutine(Credits());
