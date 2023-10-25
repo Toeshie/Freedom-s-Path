@@ -33,7 +33,7 @@ public class InventoryManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     
-    
+
     public void FinalCutsceneConditions()
     {
         if (items.Contains(item1) && items.Contains(item2))
