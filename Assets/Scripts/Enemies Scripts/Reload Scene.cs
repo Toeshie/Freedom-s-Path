@@ -18,6 +18,7 @@ using UnityEngine.SceneManagement;
         [SerializeField] private AudioClip playerEntersLightRangeClip = null;
         [SerializeField] private AudioClip playerGettingCaught = null;
         [SerializeField] private float gameOverTimer = 3.5f;
+        
         private void Awake()
         {
             playerReference = FindObjectOfType<Movement>();
