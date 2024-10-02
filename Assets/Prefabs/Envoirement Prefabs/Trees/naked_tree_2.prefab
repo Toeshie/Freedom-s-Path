@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c208bc423cc150445a066c4ca620551d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treeStoringLayer: Envoirement
-  treeBehindPlayerLayer: TilesInFrontOfBuildings
+  originalLayer: 
+  targetLayer: 
   treeSpriteRenderer: {fileID: 4068884798043527665}
 --- !u!1 &6117553385907002744
 GameObject:
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_SortingLayerID: 1615198357
   m_SortingLayer: 13
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a82db568aa64aef4cbde39b33a7ba1d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 676962223574e114c95df17dce3b2d06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -213,9 +213,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.060281754, y: 0.24471372}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0.01, z: 0, w: 0}
-    pivot: {x: 0.56640625, y: 0.05859375}
-    oldSize: {x: 5.12, y: 10.24}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
     newSize: {x: 5.12, y: 10.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
